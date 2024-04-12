@@ -15,7 +15,7 @@ const Ingredient = ({ image, name, selected = false, ...rest }: IngredientProps 
 		>
 			<Image
 				style={styles.image}
-				source={require('@/src/assets/banana.png')}
+				source={require('@/src/assets/morango.png')}
 			/>
 			<Text style={styles.text}>Banana</Text>
 		</Pressable>
