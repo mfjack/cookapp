@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderRadius: theme.borderRadius.sm,
-	},
+   },
+   
 	text: {
 		color: theme.colors.white,
 		fontSize: theme.fonts.size.body.sm,
