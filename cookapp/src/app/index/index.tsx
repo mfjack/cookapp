@@ -1,9 +1,9 @@
 import { Alert, ScrollView, Text, View } from 'react-native';
 
 import { styles } from './styles';
-import Ingredient from '@/src/_components/ingredient';
 import { useState } from 'react';
-import Selected from '@/src/_components/selected';
+import { Ingredient } from '@/src/_components/ingredient/ingredient';
+import { Selected } from '@/src/_components/selected/selected';
 
 export default function Index() {
 	const [selected, setSelected] = useState<string[]>([]);

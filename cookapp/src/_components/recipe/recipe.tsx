@@ -1,15 +1,17 @@
 import { ImageBackground, Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import { styles } from './styles';
 
-interface RecipeProps {
+type Props = TouchableOpacityProps & {
 	recipe: {
 		name: string;
 		image: string;
 		minutes: number;
 	};
-}
+};
 
-export function Recipe({ recipe, ...rest }: RecipeProps & TouchableOpacityProps) {
+export function Recipe({ recipe, ...rest }: Props) {
 	return (
 		<TouchableOpacity
 			style={styles.container}
@@ -20,7 +22,7 @@ export function Recipe({ recipe, ...rest }: RecipeProps & TouchableOpacityProps)
 				source={{ uri: recipe.image }}
 				style={styles.image}
 			>
-				<linearGradient
+				<LinearGradient
 					colors={['rgba(0,0,0,0.5)', '#000']}
 					style={styles.linear}
 				>
@@ -39,7 +41,7 @@ export function Recipe({ recipe, ...rest }: RecipeProps & TouchableOpacityProps)
 					>
 						{recipe.minutes} minutos
 					</Text>
-				</linearGradient>
+				</LinearGradient>
 			</ImageBackground>
 		</TouchableOpacity>
 	);

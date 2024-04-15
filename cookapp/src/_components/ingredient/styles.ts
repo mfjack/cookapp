@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
 		height: 16,
 	},
 
-	text: {
+	title: {
 		fontSize: theme.fonts.size.body.sm,
 		fontFamily: theme.fonts.family.medium,
 	},
