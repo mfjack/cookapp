@@ -1,4 +1,5 @@
 import { Alert, ScrollView, Text, View } from 'react-native';
+import { router } from 'expo-router';
 
 import { styles } from './styles';
 import { useState } from 'react';
@@ -29,6 +30,8 @@ export default function Index() {
 		]);
 	};
 
+	const handleSearch = () => router.push('/recipes/recipes');
+
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>
@@ -57,7 +60,7 @@ export default function Index() {
 				<Selected
 					quantity={selected.length}
 					onClear={handleClearSelected}
-					onSearch={() => {}}
+					onSearch={handleSearch}
 				/>
 			)}
 		</View>
