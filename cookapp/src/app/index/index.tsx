@@ -1,12 +1,10 @@
-import { Alert, ScrollView, Text, View } from 'react-native';
-import { router } from 'expo-router';
-
-import { services } from '@/src/services';
-
-import { styles } from './styles';
-import { useEffect, useState } from 'react';
 import { Ingredient } from '@/src/_components/ingredient/ingredient';
 import { Selected } from '@/src/_components/selected/selected';
+import { services } from '@/src/services';
+import { router } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { Alert, ScrollView, Text, View } from 'react-native';
+import { styles } from './styles';
 
 export default function Index() {
 	const [selected, setSelected] = useState<string[]>([]);
@@ -33,7 +31,7 @@ export default function Index() {
 		]);
 	};
 
-	const handleSearch = () => router.push('/recipes/recipes');
+	const handleSearch = () => router.navigate('/recipes/' + selected);
 
 	useEffect(() => {
 		services.ingredients.findAll().then(setIngredients);

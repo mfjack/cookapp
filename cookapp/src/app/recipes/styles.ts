@@ -3,13 +3,11 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
 	container: {
-      flex: 1,
-      padding: 12,
+		flex: 1,
+		padding: 12,
 	},
 
 	header: {
-		// paddingHorizontal: 22,
-		// paddingTop: 32,
 		marginBottom: 12,
 	},
 
@@ -17,5 +15,9 @@ export const styles = StyleSheet.create({
 		fontSize: theme.fonts.size.heading.md,
 		fontFamily: theme.fonts.family.bold,
 		marginTop: 12,
+	},
+
+	recipesContent: {
+		gap: 16,
 	},
 });

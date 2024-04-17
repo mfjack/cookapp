@@ -21,13 +21,13 @@ export function Selected({ quantity, onClear, onSearch }: Props) {
 		>
 			<View style={styles.header}>
 				<Text style={styles.label}>{quantity} ingredientes selecionados</Text>
-
+				{/* 
 				<MaterialIcons
 					name='close'
 					size={24}
 					color={theme.colors.gray_400}
 					onPress={onClear}
-				/>
+				/> */}
 			</View>
 
 			<Button
